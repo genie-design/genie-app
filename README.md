@@ -18,6 +18,7 @@
 - [Content Management](#content-management)
 - [Image API](#image-api)
 - [Icon Background](#icon-background)
+- [Typescript / GraphQL Page API](#typescriptgraphql-page-api)
 
 
 ## Content Management
@@ -41,7 +42,7 @@
   - Example with different backgrounds at different screen widths, with different cutouts for the dogs image
     - https://brown-dog-biscuits.pages.dev/
 
-## Typescript Page API
+## Typescript/GraphQL Page API
   - Get your content, fully typed, with GraphQL
   - https://github.com/acoreyj/brown-dog-biscuits
 
