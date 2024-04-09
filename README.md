@@ -50,21 +50,21 @@
 import { graphql } from 'gql.tada';
 import { GraphQLClient } from 'graphql-request';
 const getProductsQuery = graphql(`
-	query Products {
-		products {
-			id
-			title
-			description
-			image
-      skus {
-        id
-        title
-        description
-        price
-        size
-      }
-		}
-	}
+query Products {
+  products {
+    id
+    title
+    description
+    image
+    skus {
+      id
+      title
+      description
+      price
+      size
+    }
+  }
+}
 `);
 
 const graphQLClient = new GraphQLClient(
