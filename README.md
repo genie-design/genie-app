@@ -16,31 +16,16 @@
 ## Features
 
 - [Content Management](#content-management)
-- [Image API](#image-api)
-- [Icon Background](#icon-background)
 - [Typescript / GraphQL Page API](#typescriptgraphql-page-api)
+- [Icon Background](#icon-background)
+- [Image API](#image-api)
 
 
 ## Content Management
 - Get full featured API, GraphQL API, Authentication, Access Control, Image storage and more running on Cloudflare's global network 
 - Powered by [Sonic JS](https://github.com/genie-design/sonicjs)
 
-## Image API
-- Use [Cloudinary](https://cloudinary.com/) and their API to get image renditions (size, format, crop, etc) but use Cloudflare to cache and serve them quickly.
-- https://github.com/acoreyj/cf-worker-images
-- Not only fast, but avoids the bandwidth costs from Cloudinary and compute costs from Cloudflare
-- Create an image component so your users get the best image for their device
-  - Examples
-    - [jsx (React, Solid, Qwik, etc) ](https://github.com/acoreyj/qwik-daisyui/blob/main/apps/docs/src/components/genie-image.tsx)
-    - [Svelte](https://github.com/acoreyj/brown-dog-biscuits/blob/main/src/components/GenieImage.svelte)
-   
-## Icon Background
-  - Choose from over 200,000 icons from [Iconify](https://icon-sets.iconify.design/)
-  - Configure a range of sizes, colors, transformations, blank areas
-  - https://github.com/genie-design/icon-bg-wrangler
-  - https://github.com/genie-design/icon-background
-  - Example with different backgrounds at different screen widths, with different cutouts for the dogs image
-    - https://brown-dog-biscuits.pages.dev/
+   <a href="https://raw.githubusercontent.com/genie-design/genie-app/main/public/images/Screenshot%202024-04-09%20161118.png" target="blank"><img src="https://raw.githubusercontent.com/genie-design/genie-app/main/public/images/Screenshot%202024-04-09%20161118.png" width="500"/></a>
 
 ## Typescript/GraphQL Page API
   - Get your content, fully typed, with GraphQL
@@ -49,6 +34,8 @@
 ```ts
 import { graphql } from 'gql.tada';
 import { GraphQLClient } from 'graphql-request';
+
+// Create your query, with autocomplete!
 const getProductsQuery = graphql(`
 query Products {
   products {
@@ -70,6 +57,7 @@ query Products {
 const graphQLClient = new GraphQLClient(
 	'https://content.GENIEAPP.com/graphql'
 );
+// get your data, fully typed!
 const data = await graphQLClient.request(getProductsQuery);
 if (data?.products) {
 	return {
@@ -78,4 +66,23 @@ if (data?.products) {
 }
 
 ```
-  
+
+## Icon Background
+  - Choose from over 200,000 icons from [Iconify](https://icon-sets.iconify.design/)
+  - Configure a range of sizes, colors, transformations, blank areas
+  - https://github.com/genie-design/icon-bg-wrangler
+  - https://github.com/genie-design/icon-background
+  - Example with different backgrounds at different screen widths, with different cutouts for the dogs image
+    - https://brown-dog-biscuits.pages.dev/
+   
+     <a href="https://raw.githubusercontent.com/genie-design/genie-app/main/public/images/Screenshot%202024-04-09%20191950.png" target="blank"><img src="https://raw.githubusercontent.com/genie-design/genie-app/main/public/images/Screenshot%202024-04-09%20191950.png" width="500"/></a>
+
+
+## Image API
+- Use [Cloudinary](https://cloudinary.com/) and their API to get image renditions (size, format, crop, etc) but use Cloudflare to cache and serve them quickly.
+- https://github.com/acoreyj/cf-worker-images
+- Not only fast, but avoids the bandwidth costs from Cloudinary and compute costs from Cloudflare
+- Create an image component so your users get the best image for their device
+  - Examples
+    - [jsx (React, Solid, Qwik, etc) ](https://github.com/acoreyj/qwik-daisyui/blob/main/apps/docs/src/components/genie-image.tsx)
+    - [Svelte](https://github.com/acoreyj/brown-dog-biscuits/blob/main/src/components/GenieImage.svelte)
